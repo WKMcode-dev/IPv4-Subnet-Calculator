@@ -12,7 +12,7 @@
     "dev": "npm run dev -w @wkm/web",
     "build": "npm run build -w @wkm/core && npm run build -w @wkm/web",
     "test": "npm run test -w @wkm/core",
-    "typecheck": "npm run typecheck -w @wkm/core && npm run typecheck -w @wkm/web"
+    "typecheck": "npm run build -w @wkm/core && npm run typecheck -w @wkm/web"
   },
   "engines": {
     "node": ">=20.19.0"
