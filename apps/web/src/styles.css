@@ -36,3 +36,13 @@
 .cutout-card .vlsm-cutout-body{padding:0;max-width:100%}
 .cutout-card .vlsm-cutout-body label{max-width:500px}
 @media(max-width:720px){.cutout-card-content{padding:24px 17px 18px}.cutout-card-content>.section-top{padding-right:100px}.cutout-card .vlsm-cutout-body{padding:0}.cutout-card-action{height:37px}.cutout-action-button{font-size:11px;gap:4px}}
+
+/* SVG metric cutout — same graphite palette as standard form cards */
+.metric.metric-cutout{position:relative;isolation:isolate;background:transparent;border:0;overflow:visible;padding:18px;min-height:110px}
+.metric-cutout-svg{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:visible}
+.metric-cutout-svg path{fill:#1c1f25;stroke:#343842;stroke-width:1;stroke-linejoin:round}
+.metric-copy-action{position:absolute;top:2px;right:2px;width:38px;height:38px;border:0;background:transparent;color:#a9afba;display:grid;place-items:center;z-index:2}
+.metric-copy-action:hover{color:#f36c74}
+.metric-cutout .metric-head{padding-right:31px;min-height:25px}
+.cutout-card.data-cutout .cutout-card-content>.section-top{padding-right:130px}
+@media(max-width:720px){.cutout-card.data-cutout .cutout-card-content>.section-top{padding-right:105px}}
