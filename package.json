@@ -1,0 +1,20 @@
+{
+  "name": "wkm-ipv4-subnet-calculator",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "predev": "npm run build -w @wkm/core",
+    "dev": "npm run dev -w @wkm/web",
+    "build": "npm run build -w @wkm/core && npm run build -w @wkm/web",
+    "test": "npm run test -w @wkm/core",
+    "typecheck": "npm run typecheck -w @wkm/core && npm run typecheck -w @wkm/web"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
