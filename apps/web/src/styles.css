@@ -22,3 +22,17 @@
 .vlsm-remove{height:43px}
 .vlsm-warning{padding:12px 15px;border:1px solid #9c633c;background:#39291f;color:#f2bb88;border-radius:8px;margin-bottom:16px;font-size:12px}
 @media(max-width:720px){.vlsm-cutout{min-height:240px}.vlsm-cutout-body{padding:54px 18px 16px;max-width:100%}.vlsm-cutout-action{top:5%;right:2%;font-size:11px}.vlsm-input-row{grid-template-columns:minmax(0,1fr) 100px auto}.sidebar button.nav-item{display:flex;padding:10px;margin-top:8px}}
+
+/* Shared cutout form: 10px corners, same fill and border as .panel */
+.cutout-card{position:relative;isolation:isolate;overflow:visible!important;margin-bottom:24px;min-height:200px;background:transparent;border:0;padding:0}
+.cutout-card-svg{position:absolute;inset:0;display:block;overflow:visible!important;pointer-events:none;z-index:-1}
+.cutout-card-main,.cutout-card-tab{fill:#1b1e24;stroke:#32363f;stroke-width:1.5;stroke-linejoin:round}
+.cutout-card-content{position:relative;padding:25px 23px 23px;min-width:0}
+.cutout-card-content>.section-top{padding-right:128px}
+.cutout-card-action{position:absolute;right:2px;top:2px;width:calc(min(120px, max(100px, 25%)) - 4px);height:38px;display:flex;align-items:center;justify-content:center;z-index:2}
+.cutout-action-button{width:100%;height:100%;border:0;background:transparent;color:#d7d9df;display:flex;align-items:center;justify-content:center;gap:7px;font-size:12px;cursor:pointer}
+.cutout-action-button:hover{color:#f36c74}
+.cutout-card.vlsm-cutout{min-height:210px}
+.cutout-card .vlsm-cutout-body{padding:0;max-width:100%}
+.cutout-card .vlsm-cutout-body label{max-width:500px}
+@media(max-width:720px){.cutout-card-content{padding:24px 17px 18px}.cutout-card-content>.section-top{padding-right:100px}.cutout-card .vlsm-cutout-body{padding:0}.cutout-card-action{height:37px}.cutout-action-button{font-size:11px;gap:4px}}
