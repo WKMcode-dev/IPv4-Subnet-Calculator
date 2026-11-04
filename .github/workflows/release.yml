@@ -1,4 +1,4 @@
-name: Publish v1.1.0 Release
+name: Publish v1.2.0 Release
 on:
   push:
     branches: [main]
@@ -22,8 +22,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view v1.1.0 >/dev/null 2>&1; then
-            echo "Release v1.1.0 already exists."
+          if gh release view v1.2.0 >/dev/null 2>&1; then
+            echo "Release v1.2.0 already exists."
           else
-            gh release create v1.1.0 --target "$GITHUB_SHA" --title "WKM Network v1.1.0" --notes "VLSM calculator, emerald theme, refined SVG cards and animated isometric IPv4 network illustration." --latest
+            gh release create v1.2.0 --target "$GITHUB_SHA" --title "WKM Network v1.2.0" --notes "IPv4/CIDR calculator, VLSM planner, CIDR network comparator, refined responsive UI and animated isometric network illustration." --latest
           fi
