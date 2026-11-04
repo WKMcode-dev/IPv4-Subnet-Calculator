@@ -7,7 +7,7 @@ export type VLSMPlan = { base: SubnetResult; allocations: VLSMAllocation[]; used
 function prefixForHosts(hosts: number): number {
   if (!Number.isSafeInteger(hosts) || hosts < 1) throw new Error('A quantidade de hosts deve ser um inteiro positivo.');
   // /31 is valid for a two-endpoint point-to-point link, but ordinary LAN requests use /30 or larger.
-  if (hosts === 1) return 32;
+  if (hosts === 1) return 30;
   const bits = Math.ceil(Math.log2(hosts + 2));
   if (bits > 32) throw new Error('Quantidade de hosts excede o IPv4.');
   return 32 - bits;
