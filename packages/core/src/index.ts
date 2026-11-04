@@ -74,3 +74,6 @@ export function subnetAt(input: string, newPrefix: number, index: number): Subne
 
 export { planVLSM } from './vlsm';
 export type { VLSMRequest, VLSMAllocation, VLSMPlan } from './vlsm';
+
+export {compareNetworks} from './comparator';
+export type {NetworkComparison,NetworkRelationship} from './comparator';
