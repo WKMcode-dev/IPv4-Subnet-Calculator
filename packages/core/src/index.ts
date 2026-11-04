@@ -71,3 +71,6 @@ export function subnetAt(input: string, newPrefix: number, index: number): Subne
   const start = parseIPv4(base.network), step = 2 ** (32 - newPrefix);
   return calculate(`${formatIPv4((start + index * step) >>> 0)}/${newPrefix}`);
 }
+
+export { planVLSM } from './vlsm';
+export type { VLSMRequest, VLSMAllocation, VLSMPlan } from './vlsm';
